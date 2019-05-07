@@ -23,10 +23,7 @@ class Student
   
   def self.drop_table 
      sql =  <<-SQL 
-      DROP TABLE IF NOT EXISTS students (
-        id INTEGER PRIMARY KEY, 
-        name TEXT, 
-        grade FLOAT
+      DROP TABLE IF EXISTS students
         )
         SQL
     DB[:conn].execute(sql)    
